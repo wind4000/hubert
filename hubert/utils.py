@@ -34,7 +34,7 @@ def save_checkpoint(
         "loss": loss,
     }
     checkpoint_dir.mkdir(exist_ok=True, parents=True)
-    checkpoint_path = checkpoint_dir / f"model-{step}.pt"
+    checkpoint_path = checkpoint_dir / f"model.pt"
     torch.save(state, checkpoint_path)
     if best:
         best_path = checkpoint_dir / "model-best.pt"
